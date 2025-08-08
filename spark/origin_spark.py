@@ -182,7 +182,7 @@ if __name__ == "__main__":
     runner = CliRunner()
     path = os.path.realpath(__file__)
     input_val = '{"a": -1, "b": 3.14}'
-    result = runner.invoke(pyflyte.main, ["run", path, "wf"])
-    print("Local Execution: ", result.output)
+    # result = runner.invoke(pyflyte.main, ["run", path, "wf"])
+    # print("Local Execution: ", result.output)
     result = runner.invoke(pyflyte.main, ["run", "--remote", path, "wf"])
     print("Remote Execution: ", result.output)
